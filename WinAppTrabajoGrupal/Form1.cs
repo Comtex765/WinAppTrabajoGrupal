@@ -97,8 +97,6 @@ namespace WinAppTrabajoGrupal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Form2IngresoDatos prueba = new Form2IngresoDatos();
-            prueba.ShowDialog();
         }
     }
 }
