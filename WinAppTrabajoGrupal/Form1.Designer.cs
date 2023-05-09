@@ -30,8 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblTitle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtUser = new System.Windows.Forms.TextBox();
+            this.TxtPsw = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnLogin = new System.Windows.Forms.Button();
@@ -58,19 +58,21 @@
             this.LblTitle.TabIndex = 0;
             this.LblTitle.Text = "APLICACIÓN DE EMPRESA";
             // 
-            // textBox1
+            // TxtUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(438, 238);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 20);
-            this.textBox1.TabIndex = 1;
+            this.TxtUser.Location = new System.Drawing.Point(438, 238);
+            this.TxtUser.Name = "TxtUser";
+            this.TxtUser.Size = new System.Drawing.Size(210, 20);
+            this.TxtUser.TabIndex = 1;
+            this.TxtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUser_KeyPress);
             // 
-            // textBox2
+            // TxtPsw
             // 
-            this.textBox2.Location = new System.Drawing.Point(438, 280);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 20);
-            this.textBox2.TabIndex = 2;
+            this.TxtPsw.Location = new System.Drawing.Point(438, 280);
+            this.TxtPsw.Name = "TxtPsw";
+            this.TxtPsw.Size = new System.Drawing.Size(210, 20);
+            this.TxtPsw.TabIndex = 2;
+            this.TxtPsw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPsw_KeyPress);
             // 
             // label1
             // 
@@ -97,6 +99,7 @@
             // BtnLogin
             // 
             this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
+            this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.Location = new System.Drawing.Point(438, 337);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(105, 35);
@@ -114,10 +117,10 @@
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtPsw);
+            this.Controls.Add(this.TxtUser);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplicación de empresa";
@@ -132,8 +135,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LblTitle;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtUser;
+        private System.Windows.Forms.TextBox TxtPsw;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnLogin;
