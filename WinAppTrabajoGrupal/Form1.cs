@@ -34,7 +34,7 @@ namespace WinAppTrabajoGrupal
                     if (psw == usCredentials[1])
                     {
                         MessageBox.Show("Inicio de sesión exitoso", "Iniciar Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form2IngresoDatos obj = new Form2IngresoDatos();
+                        FormInicio obj = new FormInicio();
                         obj.ShowDialog();
                     }
                     else

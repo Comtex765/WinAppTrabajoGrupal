@@ -74,7 +74,7 @@ namespace WinAppTrabajoGrupal
 
                 if (textCed.Text.Length > 0)
                 {
-                    if(ValidarCedulaEcuatoriana(textCed.Text) || true)
+                    if(ValidarCedulaEcuatoriana(textCed.Text))
                     {
                         textProf.Enabled = true;
                         textProf.Focus();
