@@ -43,12 +43,12 @@
             this.radioDesWeb = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textNom = new System.Windows.Forms.TextBox();
-            this.textApe = new System.Windows.Forms.TextBox();
-            this.textCed = new System.Windows.Forms.TextBox();
-            this.textProf = new System.Windows.Forms.TextBox();
-            this.numHijos = new System.Windows.Forms.NumericUpDown();
             this.textCiudad = new System.Windows.Forms.TextBox();
+            this.numHijos = new System.Windows.Forms.NumericUpDown();
+            this.textProf = new System.Windows.Forms.TextBox();
+            this.textCed = new System.Windows.Forms.TextBox();
+            this.textApe = new System.Windows.Forms.TextBox();
+            this.textNom = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -252,29 +252,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Personales";
             // 
-            // textNom
+            // textCiudad
             // 
-            this.textNom.Location = new System.Drawing.Point(198, 45);
-            this.textNom.Name = "textNom";
-            this.textNom.Size = new System.Drawing.Size(183, 34);
-            this.textNom.TabIndex = 7;
-            this.textNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNom_KeyPress);
+            this.textCiudad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textCiudad.Location = new System.Drawing.Point(198, 245);
+            this.textCiudad.Name = "textCiudad";
+            this.textCiudad.Size = new System.Drawing.Size(183, 34);
+            this.textCiudad.TabIndex = 16;
+            this.textCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCiudad_KeyPress);
             // 
-            // textApe
+            // numHijos
             // 
-            this.textApe.Location = new System.Drawing.Point(198, 95);
-            this.textApe.Name = "textApe";
-            this.textApe.Size = new System.Drawing.Size(183, 34);
-            this.textApe.TabIndex = 8;
-            this.textApe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApe_KeyPress);
-            // 
-            // textCed
-            // 
-            this.textCed.Location = new System.Drawing.Point(198, 145);
-            this.textCed.Name = "textCed";
-            this.textCed.Size = new System.Drawing.Size(183, 34);
-            this.textCed.TabIndex = 9;
-            this.textCed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCed_KeyPress);
+            this.numHijos.Location = new System.Drawing.Point(303, 295);
+            this.numHijos.Name = "numHijos";
+            this.numHijos.Size = new System.Drawing.Size(78, 34);
+            this.numHijos.TabIndex = 15;
             // 
             // textProf
             // 
@@ -284,21 +276,29 @@
             this.textProf.TabIndex = 10;
             this.textProf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textProf_KeyPress);
             // 
-            // numHijos
+            // textCed
             // 
-            this.numHijos.Location = new System.Drawing.Point(303, 295);
-            this.numHijos.Name = "numHijos";
-            this.numHijos.Size = new System.Drawing.Size(78, 34);
-            this.numHijos.TabIndex = 15;
+            this.textCed.Location = new System.Drawing.Point(198, 145);
+            this.textCed.Name = "textCed";
+            this.textCed.Size = new System.Drawing.Size(183, 34);
+            this.textCed.TabIndex = 9;
+            this.textCed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCed_KeyPress);
             // 
-            // textCiudad
+            // textApe
             // 
-            this.textCiudad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textCiudad.Location = new System.Drawing.Point(198, 245);
-            this.textCiudad.Name = "textCiudad";
-            this.textCiudad.Size = new System.Drawing.Size(183, 34);
-            this.textCiudad.TabIndex = 16;
-            this.textCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCiudad_KeyPress);
+            this.textApe.Location = new System.Drawing.Point(198, 95);
+            this.textApe.Name = "textApe";
+            this.textApe.Size = new System.Drawing.Size(183, 34);
+            this.textApe.TabIndex = 8;
+            this.textApe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApe_KeyPress);
+            // 
+            // textNom
+            // 
+            this.textNom.Location = new System.Drawing.Point(198, 45);
+            this.textNom.Name = "textNom";
+            this.textNom.Size = new System.Drawing.Size(183, 34);
+            this.textNom.TabIndex = 7;
+            this.textNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNom_KeyPress);
             // 
             // button1
             // 
@@ -333,8 +333,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(924, 105);
+            this.dataGridView1.Size = new System.Drawing.Size(10, 10);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.Visible = false;
             // 
             // Nombre
             // 
