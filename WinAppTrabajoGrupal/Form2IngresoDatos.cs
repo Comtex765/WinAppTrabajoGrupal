@@ -207,15 +207,15 @@ namespace WinAppTrabajoGrupal
         private string CalcularSueldo()
         {
             if (radioAdmiFin.Checked)
-                return "Administración Financiera - $2000 /mes";
+                return "Administración Financiera: $2000 /mes";
             else if (radioProgra.Checked)
-                return "Programación - $5000 /mes";
+                return "Programación: $5000 /mes";
             else if (radioDesWeb.Checked)
-                return "Desarrollo Wev - $1500 /mes";
+                return "Desarrollo Web: $1500 /mes";
             else if (radioMarket.Checked)
-                return "Marketing - $4200 /mes";
+                return "Marketing: $4200 /mes";
             else if (radioDisGraf.Checked)
-                return "Diseño Gráfico - $1800 /mes";
+                return "Diseño Gráfico: $1800 /mes";
 
             return "#####";
 
