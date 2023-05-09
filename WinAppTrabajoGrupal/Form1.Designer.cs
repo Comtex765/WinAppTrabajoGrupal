@@ -109,10 +109,9 @@
             // 
             this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
             this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.Location = new System.Drawing.Point(584, 415);
-            this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLogin.Location = new System.Drawing.Point(438, 318);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(140, 43);
+            this.BtnLogin.Size = new System.Drawing.Size(106, 42);
             this.BtnLogin.TabIndex = 4;
             this.BtnLogin.Text = "Iniciar Sesión";
             this.BtnLogin.UseVisualStyleBackColor = false;
