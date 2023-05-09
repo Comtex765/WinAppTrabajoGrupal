@@ -30,8 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblTitle = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
+            this.textFiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -67,29 +67,32 @@
             this.LblTitle.TabIndex = 0;
             this.LblTitle.Text = "LISTAR EMPLEADOS";
             // 
-            // comboBox1
+            // comboBoxFiltro
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFiltro.FormattingEnabled = true;
+            this.comboBoxFiltro.Items.AddRange(new object[] {
             "Nombre",
             "Apellido",
             "Profesión",
             "# hijos",
             "Residencia",
-            "Área de Trabajo"});
-            this.comboBox1.Location = new System.Drawing.Point(172, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 37);
-            this.comboBox1.TabIndex = 5;
+            "Área de Trabajo",
+            "TODOS"});
+            this.comboBoxFiltro.Location = new System.Drawing.Point(172, 111);
+            this.comboBoxFiltro.Name = "comboBoxFiltro";
+            this.comboBoxFiltro.Size = new System.Drawing.Size(217, 37);
+            this.comboBoxFiltro.TabIndex = 5;
+            this.comboBoxFiltro.SelectedIndexChanged += new System.EventHandler(this.comboBoxFiltro_SelectedIndexChanged);
             // 
-            // textBox1
+            // textFiltro
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(672, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 35);
-            this.textBox1.TabIndex = 6;
+            this.textFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textFiltro.Location = new System.Drawing.Point(672, 111);
+            this.textFiltro.Name = "textFiltro";
+            this.textFiltro.Size = new System.Drawing.Size(179, 35);
+            this.textFiltro.TabIndex = 6;
+            this.textFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textFiltro_KeyPress);
             // 
             // label1
             // 
@@ -101,7 +104,6 @@
             this.label1.Size = new System.Drawing.Size(125, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Listar por";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -194,12 +196,13 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textFiltro);
+            this.Controls.Add(this.comboBoxFiltro);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListar";
             this.Text = "FormListar";
+            this.Load += new System.EventHandler(this.FormListar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -212,8 +215,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LblTitle;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxFiltro;
+        private System.Windows.Forms.TextBox textFiltro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;

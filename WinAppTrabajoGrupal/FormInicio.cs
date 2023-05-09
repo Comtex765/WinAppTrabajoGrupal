@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace WinAppTrabajoGrupal
         {
             InitializeComponent();
         }
+
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -71,6 +74,22 @@ namespace WinAppTrabajoGrupal
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+            if (panel2.Controls.Count > 0)
+                panel2.Controls.RemoveAt(0);
+
+            FormListar  formFiltro = new FormListar();
+
+            formFiltro.TopLevel = false;
+            formFiltro.Dock = DockStyle.Fill;
+
+            panel2.Controls.Add(formFiltro);
+            panel2.Tag = formFiltro;
+
+            formFiltro.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
