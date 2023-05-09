@@ -22,48 +22,48 @@ namespace WinAppTrabajoGrupal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (panel2.Controls.Count > 0)
-                panel2.Controls.RemoveAt(0);
+            if (panelCargarForm.Controls.Count > 0)
+                panelCargarForm.Controls.RemoveAt(0);
 
             Form2IngresoDatos formIngreso = new Form2IngresoDatos();
 
             formIngreso.TopLevel = false;
             formIngreso.Dock = DockStyle.Fill;
 
-            panel2.Controls.Add(formIngreso);
-            panel2.Tag = formIngreso;
+            panelCargarForm.Controls.Add(formIngreso);
+            panelCargarForm.Tag = formIngreso;
 
             formIngreso.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (panel2.Controls.Count > 0)
-                panel2.Controls.RemoveAt(0);
+            if (panelCargarForm.Controls.Count > 0)
+                panelCargarForm.Controls.RemoveAt(0);
 
             Form3VisualizaciónDataGridcs formVer = new Form3VisualizaciónDataGridcs();
 
             formVer.TopLevel = false;
             formVer.Dock = DockStyle.Fill;
 
-            panel2.Controls.Add(formVer);
-            panel2.Tag = formVer;
+            panelCargarForm.Controls.Add(formVer);
+            panelCargarForm.Tag = formVer;
 
             formVer.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (panel2.Controls.Count > 0)
-                panel2.Controls.RemoveAt(0);
+            if (panelCargarForm.Controls.Count > 0)
+                panelCargarForm.Controls.RemoveAt(0);
 
             DeleteForm formVer = new DeleteForm();
 
             formVer.TopLevel = false;
             formVer.Dock = DockStyle.Fill;
 
-            panel2.Controls.Add(formVer);
-            panel2.Tag = formVer;
+            panelCargarForm.Controls.Add(formVer);
+            panelCargarForm.Tag = formVer;
 
             formVer.Show();
         }
@@ -75,23 +75,18 @@ namespace WinAppTrabajoGrupal
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (panel2.Controls.Count > 0)
-                panel2.Controls.RemoveAt(0);
+            if (panelCargarForm.Controls.Count > 0)
+                panelCargarForm.Controls.RemoveAt(0);
 
             FormListar  formFiltro = new FormListar();
 
             formFiltro.TopLevel = false;
             formFiltro.Dock = DockStyle.Fill;
 
-            panel2.Controls.Add(formFiltro);
-            panel2.Tag = formFiltro;
+            panelCargarForm.Controls.Add(formFiltro);
+            panelCargarForm.Tag = formFiltro;
 
             formFiltro.Show();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void FormInicio_Load(object sender, EventArgs e)
@@ -101,8 +96,8 @@ namespace WinAppTrabajoGrupal
             formIngreso.TopLevel = false;
             formIngreso.Dock = DockStyle.Fill;
 
-            panel2.Controls.Add(formIngreso);
-            panel2.Tag = formIngreso;
+            panelCargarForm.Controls.Add(formIngreso);
+            panelCargarForm.Tag = formIngreso;
 
             formIngreso.Show();
         }

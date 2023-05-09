@@ -28,125 +28,145 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonVer = new System.Windows.Forms.Button();
+            this.buttonSalir = new System.Windows.Forms.Button();
+            this.buttonListar = new System.Windows.Forms.Button();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonIngresar = new System.Windows.Forms.Button();
+            this.panelCargarForm = new System.Windows.Forms.Panel();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelMenu
             // 
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(127, 486);
-            this.panel1.TabIndex = 0;
+            this.panelMenu.Controls.Add(this.buttonVer);
+            this.panelMenu.Controls.Add(this.buttonSalir);
+            this.panelMenu.Controls.Add(this.buttonListar);
+            this.panelMenu.Controls.Add(this.buttonEliminar);
+            this.panelMenu.Controls.Add(this.buttonIngresar);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(127, 486);
+            this.panelMenu.TabIndex = 0;
             // 
-            // button5
+            // buttonVer
             // 
-            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 388);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 98);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "SALIR";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(67)))));
+            this.buttonVer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVer.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVer.ForeColor = System.Drawing.Color.White;
+            this.buttonVer.Location = new System.Drawing.Point(0, 97);
+            this.buttonVer.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonVer.Name = "buttonVer";
+            this.buttonVer.Size = new System.Drawing.Size(127, 97);
+            this.buttonVer.TabIndex = 1;
+            this.buttonVer.Text = "Visualizar Empleados";
+            this.buttonVer.UseVisualStyleBackColor = false;
+            this.buttonVer.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button4
+            // buttonSalir
             // 
-            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 291);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 97);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Listar Empleados";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(67)))));
+            this.buttonSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalir.ForeColor = System.Drawing.Color.White;
+            this.buttonSalir.Location = new System.Drawing.Point(0, 388);
+            this.buttonSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSalir.Name = "buttonSalir";
+            this.buttonSalir.Size = new System.Drawing.Size(127, 98);
+            this.buttonSalir.TabIndex = 4;
+            this.buttonSalir.Text = "SALIR";
+            this.buttonSalir.UseVisualStyleBackColor = false;
+            this.buttonSalir.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button3
+            // buttonListar
             // 
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 194);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 97);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Eliminar Empleados";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(67)))));
+            this.buttonListar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListar.ForeColor = System.Drawing.Color.White;
+            this.buttonListar.Location = new System.Drawing.Point(0, 291);
+            this.buttonListar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonListar.Name = "buttonListar";
+            this.buttonListar.Size = new System.Drawing.Size(127, 97);
+            this.buttonListar.TabIndex = 3;
+            this.buttonListar.Text = "Listar Empleados";
+            this.buttonListar.UseVisualStyleBackColor = false;
+            this.buttonListar.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button2
+            // buttonEliminar
             // 
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 97);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 97);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Visualizar Empleados";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(67)))));
+            this.buttonEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.ForeColor = System.Drawing.Color.White;
+            this.buttonEliminar.Location = new System.Drawing.Point(0, 194);
+            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(127, 97);
+            this.buttonEliminar.TabIndex = 2;
+            this.buttonEliminar.Text = "Eliminar Empleados";
+            this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // buttonIngresar
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 97);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Ingreso Datos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(67)))));
+            this.buttonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIngresar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIngresar.ForeColor = System.Drawing.Color.White;
+            this.buttonIngresar.Location = new System.Drawing.Point(0, 0);
+            this.buttonIngresar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonIngresar.Name = "buttonIngresar";
+            this.buttonIngresar.Size = new System.Drawing.Size(127, 97);
+            this.buttonIngresar.TabIndex = 0;
+            this.buttonIngresar.Text = "Ingreso de Datos";
+            this.buttonIngresar.UseVisualStyleBackColor = false;
+            this.buttonIngresar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel2
+            // panelCargarForm
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(127, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(907, 486);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panelCargarForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
+            this.panelCargarForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCargarForm.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panelCargarForm.Location = new System.Drawing.Point(127, 0);
+            this.panelCargarForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panelCargarForm.Name = "panelCargarForm";
+            this.panelCargarForm.Size = new System.Drawing.Size(907, 486);
+            this.panelCargarForm.TabIndex = 1;
             // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 486);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCargarForm);
+            this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplicación de empresa";
-            this.Load += new System.EventHandler(this.FormInicio_Load);
-            this.panel1.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button buttonSalir;
+        private System.Windows.Forms.Button buttonListar;
+        private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.Button buttonVer;
+        private System.Windows.Forms.Button buttonIngresar;
+        private System.Windows.Forms.Panel panelCargarForm;
     }
 }

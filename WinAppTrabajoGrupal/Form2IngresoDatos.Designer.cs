@@ -40,20 +40,22 @@
             this.radioAdmiFin = new System.Windows.Forms.RadioButton();
             this.radioDisGraf = new System.Windows.Forms.RadioButton();
             this.radioDesWeb = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxArea = new System.Windows.Forms.GroupBox();
+            this.groupBoxDatos = new System.Windows.Forms.GroupBox();
             this.textCiudad = new System.Windows.Forms.TextBox();
             this.numHijos = new System.Windows.Forms.NumericUpDown();
             this.textProf = new System.Windows.Forms.TextBox();
             this.textCed = new System.Windows.Forms.TextBox();
             this.textApe = new System.Windows.Forms.TextBox();
             this.textNom = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAceptar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblTitle = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.buttonBorrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBoxArea.SuspendLayout();
+            this.groupBoxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numHijos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -205,53 +207,53 @@
             this.radioDesWeb.Text = "Desarrollo Web";
             this.radioDesWeb.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // groupBoxArea
             // 
-            this.groupBox1.Controls.Add(this.radioDesWeb);
-            this.groupBox1.Controls.Add(this.radioDisGraf);
-            this.groupBox1.Controls.Add(this.radioAdmiFin);
-            this.groupBox1.Controls.Add(this.radioMarket);
-            this.groupBox1.Controls.Add(this.radioProgra);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
-            this.groupBox1.Location = new System.Drawing.Point(546, 132);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(304, 205);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Área de Trabajo";
+            this.groupBoxArea.Controls.Add(this.radioDesWeb);
+            this.groupBoxArea.Controls.Add(this.radioDisGraf);
+            this.groupBoxArea.Controls.Add(this.radioAdmiFin);
+            this.groupBoxArea.Controls.Add(this.radioMarket);
+            this.groupBoxArea.Controls.Add(this.radioProgra);
+            this.groupBoxArea.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
+            this.groupBoxArea.Location = new System.Drawing.Point(546, 155);
+            this.groupBoxArea.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxArea.Name = "groupBoxArea";
+            this.groupBoxArea.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxArea.Size = new System.Drawing.Size(304, 205);
+            this.groupBoxArea.TabIndex = 12;
+            this.groupBoxArea.TabStop = false;
+            this.groupBoxArea.Text = "Área de Trabajo";
             // 
-            // groupBox2
+            // groupBoxDatos
             // 
-            this.groupBox2.Controls.Add(this.textCiudad);
-            this.groupBox2.Controls.Add(this.numHijos);
-            this.groupBox2.Controls.Add(this.textProf);
-            this.groupBox2.Controls.Add(this.textCed);
-            this.groupBox2.Controls.Add(this.textApe);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textNom);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
-            this.groupBox2.Location = new System.Drawing.Point(11, 132);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(435, 298);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos Personales";
+            this.groupBoxDatos.Controls.Add(this.textCiudad);
+            this.groupBoxDatos.Controls.Add(this.numHijos);
+            this.groupBoxDatos.Controls.Add(this.textProf);
+            this.groupBoxDatos.Controls.Add(this.textCed);
+            this.groupBoxDatos.Controls.Add(this.textApe);
+            this.groupBoxDatos.Controls.Add(this.label7);
+            this.groupBoxDatos.Controls.Add(this.label6);
+            this.groupBoxDatos.Controls.Add(this.textNom);
+            this.groupBoxDatos.Controls.Add(this.label4);
+            this.groupBoxDatos.Controls.Add(this.label3);
+            this.groupBoxDatos.Controls.Add(this.label2);
+            this.groupBoxDatos.Controls.Add(this.label5);
+            this.groupBoxDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBoxDatos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxDatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
+            this.groupBoxDatos.Location = new System.Drawing.Point(11, 155);
+            this.groupBoxDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxDatos.Name = "groupBoxDatos";
+            this.groupBoxDatos.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxDatos.Size = new System.Drawing.Size(435, 298);
+            this.groupBoxDatos.TabIndex = 13;
+            this.groupBoxDatos.TabStop = false;
+            this.groupBoxDatos.Text = "Datos Personales";
             // 
             // textCiudad
             // 
-            this.textCiudad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textCiudad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCiudad.Location = new System.Drawing.Point(148, 199);
             this.textCiudad.Margin = new System.Windows.Forms.Padding(2);
             this.textCiudad.Name = "textCiudad";
@@ -261,14 +263,16 @@
             // 
             // numHijos
             // 
-            this.numHijos.Location = new System.Drawing.Point(148, 239);
+            this.numHijos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHijos.Location = new System.Drawing.Point(323, 239);
             this.numHijos.Margin = new System.Windows.Forms.Padding(2);
             this.numHijos.Name = "numHijos";
-            this.numHijos.Size = new System.Drawing.Size(58, 29);
+            this.numHijos.Size = new System.Drawing.Size(90, 29);
             this.numHijos.TabIndex = 15;
             // 
             // textProf
             // 
+            this.textProf.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textProf.Location = new System.Drawing.Point(148, 158);
             this.textProf.Margin = new System.Windows.Forms.Padding(2);
             this.textProf.Name = "textProf";
@@ -278,6 +282,7 @@
             // 
             // textCed
             // 
+            this.textCed.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCed.Location = new System.Drawing.Point(148, 118);
             this.textCed.Margin = new System.Windows.Forms.Padding(2);
             this.textCed.Name = "textCed";
@@ -287,6 +292,7 @@
             // 
             // textApe
             // 
+            this.textApe.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textApe.Location = new System.Drawing.Point(148, 77);
             this.textApe.Margin = new System.Windows.Forms.Padding(2);
             this.textApe.Name = "textApe";
@@ -296,6 +302,7 @@
             // 
             // textNom
             // 
+            this.textNom.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNom.Location = new System.Drawing.Point(148, 37);
             this.textNom.Margin = new System.Windows.Forms.Padding(2);
             this.textNom.Name = "textNom";
@@ -303,21 +310,22 @@
             this.textNom.TabIndex = 7;
             this.textNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNom_KeyPress);
             // 
-            // button1
+            // buttonAceptar
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(190)))), ((int)(((byte)(154)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(734, 396);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 34);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "ACEPTAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAceptar.AutoSize = true;
+            this.buttonAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(190)))), ((int)(((byte)(154)))));
+            this.buttonAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAceptar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAceptar.ForeColor = System.Drawing.Color.Black;
+            this.buttonAceptar.Location = new System.Drawing.Point(734, 419);
+            this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAceptar.Name = "buttonAceptar";
+            this.buttonAceptar.Size = new System.Drawing.Size(116, 34);
+            this.buttonAceptar.TabIndex = 14;
+            this.buttonAceptar.Text = "ACEPTAR";
+            this.buttonAceptar.UseVisualStyleBackColor = false;
+            this.buttonAceptar.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -339,26 +347,56 @@
             this.LblTitle.TabIndex = 0;
             this.LblTitle.Text = "INGRESO DE DATOS DE EMPLEADOS";
             // 
+            // buttonBorrar
+            // 
+            this.buttonBorrar.AutoSize = true;
+            this.buttonBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(72)))), ((int)(((byte)(85)))));
+            this.buttonBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBorrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrar.ForeColor = System.Drawing.Color.Black;
+            this.buttonBorrar.Location = new System.Drawing.Point(546, 419);
+            this.buttonBorrar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBorrar.Name = "buttonBorrar";
+            this.buttonBorrar.Size = new System.Drawing.Size(116, 34);
+            this.buttonBorrar.TabIndex = 17;
+            this.buttonBorrar.Text = "BORRAR";
+            this.buttonBorrar.UseVisualStyleBackColor = false;
+            this.buttonBorrar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(220)))), ((int)(((byte)(92)))));
+            this.label1.Location = new System.Drawing.Point(12, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(398, 28);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "El ingreso de datos es secuencial";
+            // 
             // Form2IngresoDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(907, 486);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonBorrar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonAceptar);
+            this.Controls.Add(this.groupBoxDatos);
+            this.Controls.Add(this.groupBoxArea);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2IngresoDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2IngresoDatos";
             this.Load += new System.EventHandler(this.Form2IngresoDatos_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxArea.ResumeLayout(false);
+            this.groupBoxArea.PerformLayout();
+            this.groupBoxDatos.ResumeLayout(false);
+            this.groupBoxDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numHijos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -379,17 +417,19 @@
         private System.Windows.Forms.RadioButton radioAdmiFin;
         private System.Windows.Forms.RadioButton radioDisGraf;
         private System.Windows.Forms.RadioButton radioDesWeb;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxArea;
+        private System.Windows.Forms.GroupBox groupBoxDatos;
         private System.Windows.Forms.NumericUpDown numHijos;
         private System.Windows.Forms.TextBox textProf;
         private System.Windows.Forms.TextBox textCed;
         private System.Windows.Forms.TextBox textApe;
         private System.Windows.Forms.TextBox textNom;
         private System.Windows.Forms.TextBox textCiudad;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LblTitle;
+        private System.Windows.Forms.Button buttonBorrar;
+        private System.Windows.Forms.Label label1;
     }
 }

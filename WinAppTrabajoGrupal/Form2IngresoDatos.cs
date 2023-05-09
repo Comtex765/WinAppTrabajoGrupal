@@ -21,16 +21,14 @@ namespace WinAppTrabajoGrupal
 
         private void Form2IngresoDatos_Load(object sender, EventArgs e)
         {
-            textApe.Enabled = false;
-            textCed.Enabled = false;
-            textProf.Enabled = false;
-            textCiudad.Enabled = false;
-            numHijos.Enabled = false;
+            Reiniciar();
         }
 
         private void textNom_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (Char.IsLetter(e.KeyChar))
+                e.KeyChar = Char.ToUpper(e.KeyChar);
+            else if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
 
@@ -48,7 +46,9 @@ namespace WinAppTrabajoGrupal
 
         private void textApe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            if (Char.IsLetter(e.KeyChar))
+                e.KeyChar = Char.ToUpper(e.KeyChar);
+            else if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
 
@@ -117,7 +117,9 @@ namespace WinAppTrabajoGrupal
 
         private void textProf_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            if (Char.IsLetter(e.KeyChar))
+                e.KeyChar = Char.ToUpper(e.KeyChar);
+            else if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
 
@@ -135,17 +137,20 @@ namespace WinAppTrabajoGrupal
 
         private void textCiudad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            if (Char.IsLetter(e.KeyChar))
+                e.KeyChar = Char.ToUpper(e.KeyChar);
+            else if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
 
                 if (textCiudad.Text.Length > 0)
                 {
-                    if (ValidarCedulaEcuatoriana(textCed.Text))
-                    {
-                        numHijos.Enabled = true;
-                        numHijos.Focus();
-                    }
+                    numHijos.Enabled = true;
+
+                    foreach (RadioButton radioButton in groupBoxArea.Controls.OfType<RadioButton>())
+                        radioButton.Enabled = true;
+
+                     numHijos.Focus();
                 }
                 else
                 {
@@ -192,6 +197,14 @@ namespace WinAppTrabajoGrupal
             textProf.Enabled = false;
             textCiudad.Enabled = false;
             numHijos.Enabled = false;
+
+            numHijos.Value = 0;
+
+            foreach (RadioButton radioButton in groupBoxArea.Controls.OfType<RadioButton>())
+            {
+                radioButton.Checked = false;
+                radioButton.Enabled = false;
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -203,6 +216,7 @@ namespace WinAppTrabajoGrupal
             }
             else
             {
+                MessageBox.Show("Asegúrate de haber llenado todos los campos del empleado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -255,6 +269,16 @@ namespace WinAppTrabajoGrupal
 
             return ("$" + sueldo.ToString() + " /mes");
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string texto = "¿Está seguro de borrar los datos del empleado?";
+
+            bool opcion = MessageBox.Show(texto, "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes;
+
+            if (opcion)
+                Reiniciar();
         }
     }
 }

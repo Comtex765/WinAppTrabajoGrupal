@@ -84,7 +84,9 @@ namespace WinAppTrabajoGrupal
 
         private void textFiltro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (Char.IsLetter(e.KeyChar))
+                e.KeyChar = Char.ToUpper(e.KeyChar);
+            else if (e.KeyChar == (char)Keys.Enter)
             {
                 if(textFiltro.Text.Length > 0)
                 {

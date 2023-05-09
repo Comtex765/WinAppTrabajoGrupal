@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -88,18 +96,20 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(590, 360);
+            this.dataGridView1.Size = new System.Drawing.Size(590, 346);
             this.dataGridView1.TabIndex = 3;
             // 
             // BtnDeleteDni
             // 
+            this.BtnDeleteDni.AutoSize = true;
             this.BtnDeleteDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(190)))), ((int)(((byte)(154)))));
             this.BtnDeleteDni.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDeleteDni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDeleteDni.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteDni.Location = new System.Drawing.Point(616, 227);
+            this.BtnDeleteDni.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDeleteDni.ForeColor = System.Drawing.Color.Black;
+            this.BtnDeleteDni.Location = new System.Drawing.Point(616, 239);
             this.BtnDeleteDni.Name = "BtnDeleteDni";
-            this.BtnDeleteDni.Size = new System.Drawing.Size(106, 42);
+            this.BtnDeleteDni.Size = new System.Drawing.Size(116, 42);
             this.BtnDeleteDni.TabIndex = 4;
             this.BtnDeleteDni.Text = "ELIMINAR";
             this.BtnDeleteDni.UseVisualStyleBackColor = false;
@@ -138,47 +148,63 @@
             // 
             // Nombre
             // 
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle17;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             // 
             // Apellido
             // 
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.Apellido.DefaultCellStyle = dataGridViewCellStyle18;
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.MinimumWidth = 6;
             this.Apellido.Name = "Apellido";
             // 
             // Cedula
             // 
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.Cedula.DefaultCellStyle = dataGridViewCellStyle19;
             this.Cedula.HeaderText = "Cédula";
             this.Cedula.MinimumWidth = 6;
             this.Cedula.Name = "Cedula";
             // 
             // Profesion
             // 
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            this.Profesion.DefaultCellStyle = dataGridViewCellStyle20;
             this.Profesion.HeaderText = "Profesión";
             this.Profesion.MinimumWidth = 6;
             this.Profesion.Name = "Profesion";
             // 
             // NumHijos
             // 
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            this.NumHijos.DefaultCellStyle = dataGridViewCellStyle21;
             this.NumHijos.HeaderText = "# hijos";
             this.NumHijos.MinimumWidth = 6;
             this.NumHijos.Name = "NumHijos";
             // 
             // Residencia
             // 
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            this.Residencia.DefaultCellStyle = dataGridViewCellStyle22;
             this.Residencia.HeaderText = "Residencia";
             this.Residencia.MinimumWidth = 6;
             this.Residencia.Name = "Residencia";
             // 
             // Area
             // 
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            this.Area.DefaultCellStyle = dataGridViewCellStyle23;
             this.Area.HeaderText = "Área de Trabajo";
             this.Area.Name = "Area";
             // 
             // Sueldo
             // 
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            this.Sueldo.DefaultCellStyle = dataGridViewCellStyle24;
             this.Sueldo.HeaderText = "Sueldo";
             this.Sueldo.MinimumWidth = 6;
             this.Sueldo.Name = "Sueldo";
