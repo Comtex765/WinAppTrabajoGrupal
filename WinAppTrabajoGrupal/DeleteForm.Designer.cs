@@ -188,6 +188,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DeleteForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
