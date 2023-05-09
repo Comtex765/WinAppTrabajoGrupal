@@ -51,7 +51,7 @@
             this.LblTitle.AutoSize = true;
             this.LblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitle.ForeColor = System.Drawing.Color.White;
-            this.LblTitle.Location = new System.Drawing.Point(329, 26);
+            this.LblTitle.Location = new System.Drawing.Point(229, 26);
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(448, 43);
             this.LblTitle.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.LblTitle);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1050, 100);
+            this.panel1.Size = new System.Drawing.Size(907, 100);
             this.panel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -81,12 +81,12 @@
             this.NumHijos,
             this.Residencia,
             this.Sueldo});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 151);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 115);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(675, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(590, 360);
             this.dataGridView1.TabIndex = 3;
             // 
             // Nombre
@@ -135,7 +135,7 @@
             // 
             this.BtnDeleteDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
             this.BtnDeleteDni.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteDni.Location = new System.Drawing.Point(750, 264);
+            this.BtnDeleteDni.Location = new System.Drawing.Point(616, 228);
             this.BtnDeleteDni.Name = "BtnDeleteDni";
             this.BtnDeleteDni.Size = new System.Drawing.Size(106, 42);
             this.BtnDeleteDni.TabIndex = 4;
@@ -146,7 +146,7 @@
             // TxtDni
             // 
             this.TxtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDni.Location = new System.Drawing.Point(750, 182);
+            this.TxtDni.Location = new System.Drawing.Point(616, 146);
             this.TxtDni.Name = "TxtDni";
             this.TxtDni.Size = new System.Drawing.Size(158, 22);
             this.TxtDni.TabIndex = 5;
@@ -157,7 +157,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(747, 151);
+            this.label1.Location = new System.Drawing.Point(613, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(288, 18);
             this.label1.TabIndex = 1;
@@ -168,7 +168,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(747, 233);
+            this.label2.Location = new System.Drawing.Point(613, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(285, 18);
             this.label2.TabIndex = 6;
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
-            this.ClientSize = new System.Drawing.Size(1050, 525);
+            this.ClientSize = new System.Drawing.Size(907, 486);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtDni);
@@ -190,6 +190,7 @@
             this.Name = "DeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteForm";
+            this.Load += new System.EventHandler(this.DeleteForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

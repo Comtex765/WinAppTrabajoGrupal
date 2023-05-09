@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WinAppTrabajoGrupal
 {
@@ -36,8 +37,6 @@ namespace WinAppTrabajoGrupal
                 {
                     textApe.Enabled = true;
                     textApe.Focus();
-
-                    dataGridView1.Rows.Add(textNom.Text);
                 }
                 else
                 {
@@ -56,8 +55,6 @@ namespace WinAppTrabajoGrupal
                 {
                     textCed.Enabled = true;
                     textCed.Focus();
-                    int fila = dataGridView1.RowCount - 2;
-                    dataGridView1[1,fila].Value = textApe.Text;
                 }
                 else
                 {
@@ -78,8 +75,6 @@ namespace WinAppTrabajoGrupal
                     {
                         textProf.Enabled = true;
                         textProf.Focus();
-                        int fila = dataGridView1.RowCount - 2;
-                        dataGridView1[2, fila].Value = textCed.Text;
                     }
                 }
                 else
@@ -129,8 +124,6 @@ namespace WinAppTrabajoGrupal
                 {
                      textCiudad.Enabled = true;
                      textCiudad.Focus();
-                    int fila = dataGridView1.RowCount - 2;
-                    dataGridView1[3, fila].Value = textProf.Text;
                 }
                 else
                 {
@@ -151,8 +144,6 @@ namespace WinAppTrabajoGrupal
                     {
                         numHijos.Enabled = true;
                         numHijos.Focus();
-                        int fila = dataGridView1.RowCount - 2;
-                        dataGridView1[5, fila].Value = textCiudad.Text;
                     }
                 }
                 else
@@ -162,39 +153,71 @@ namespace WinAppTrabajoGrupal
             }
         }
 
+        private void GuardarAlArchivo()
+        {
+            string sueldo = CalcularSueldo();
+
+            // Ruta del archivo donde se guardarán los datos.
+            string rutaArchivo = Application.StartupPath + "\\datos.txt";
+
+            // Crear un objeto StreamWriter para escribir en el archivo.
+            using (StreamWriter escritor = new StreamWriter(rutaArchivo, true))
+            {
+                // Escribir los datos en el archivo.
+                escritor.WriteLine(textNom.Text + 
+                    "-" + textApe.Text + 
+                    "-" + textCed.Text + 
+                    "-" + textProf.Text + 
+                    "-" + textCiudad.Text + 
+                    "-" + numHijos.Text + 
+                    "-" + sueldo
+                );
+            }
+
+
+        }
+        private void Reiniciar()
+        {
+            textNom.Focus();
+            textNom.Clear();
+            textApe.Clear();
+            textProf.Clear();
+            textCed.Clear();
+            textCiudad.Clear();
+
+            textApe.Enabled = false;
+            textCed.Enabled = false;
+            textProf.Enabled = false;
+            textCiudad.Enabled = false;
+            numHijos.Enabled = false;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if(radioAdmiFin.Checked || radioDesWeb.Checked || radioDisGraf.Checked || radioMarket.Checked || radioProgra.Checked)
             {
-                MessageBox.Show("El empleado se ha agregado correctamente, verlo en el menú", "INFO");
-                int fila = dataGridView1.RowCount - 2;
-                CalcularSueldo();
-                dataGridView1[4, fila].Value = numHijos.Value.ToString();
-
-                Form3VisualizaciónDataGridcs a = new Form3VisualizaciónDataGridcs(dataGridView1);
-                a.ShowDialog();
+                GuardarAlArchivo();
+                Reiniciar();
+                MessageBox.Show("El empleado se ha guardado correctamente","INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Debe ingresar su área de trabajo");
             }
         }
 
-        private void CalcularSueldo()
+        private string CalcularSueldo()
         {
-            int fila = dataGridView1.RowCount - 2;
-
             if (radioAdmiFin.Checked)
-                dataGridView1[6,fila].Value = "$2000 /mes";
+                return "Administración Financiera - $2000 /mes";
             else if (radioProgra.Checked)
-                dataGridView1[6, fila].Value = "$5000 /mes";
+                return "Programación - $5000 /mes";
             else if (radioDesWeb.Checked)
-                dataGridView1[6, fila].Value = "$1500 /mes";
+                return "Desarrollo Wev - $1500 /mes";
             else if (radioMarket.Checked)
-                dataGridView1[6, fila].Value = "$4200 /mes";
+                return "Marketing - $4200 /mes";
             else if (radioDisGraf.Checked)
-                dataGridView1[6, fila].Value = "$1800 /mes";
+                return "Diseño Gráfico - $1800 /mes";
 
+            return "#####";
 
         }
     }

@@ -7,48 +7,72 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WinAppTrabajoGrupal
 {
     public partial class DeleteForm : Form
     {
-        public DeleteForm(DataGridView datagrid)
+        public DeleteForm()
         {
             InitializeComponent();
-            foreach (DataGridViewRow row in datagrid.Rows)
+        }
+
+        private void CargarDatos()
+        {
+            // Ruta del archivo que se desea leer.
+            string rutaArchivo = Application.StartupPath + "\\datos.txt";
+
+            // Crear un objeto StreamReader para leer el archivo.
+            using (StreamReader lector = new StreamReader(rutaArchivo))
             {
-                dataGridView1.Rows.Add();
-                dataGridView1.Rows[row.Index].Cells["Column1"].Value = row.Cells[0].Value;
+                // Leer todas las líneas del archivo.
+                while (!lector.EndOfStream)
+                {
+                    string linea = lector.ReadLine();
+
+                    string[] palabrasLinea = linea.Split('-');
+
+                    int con = dataGridView1.RowCount;
+                    dataGridView1.Rows.Add(palabrasLinea);
+
+                }
             }
         }
 
+
         private void TxtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int n = dataGridView1.RowCount;
-            try
+            if(e.KeyChar == (char)Keys.Enter)
             {
-                string dni = TxtDni.Text;
-                for (int i = 0; i < n; i++)
+                e.Handled = true;
+                int n = dataGridView1.RowCount;
+                try
                 {
-                    if (dataGridView1.Rows[i].Cells[2].Value == null && dataGridView1.Rows.Count > 1)
+                    string dni = TxtDni.Text;
+                    for (int i = 0; i < n; i++)
                     {
-                        MessageBox.Show("No se encuentra el empleado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        string cellValue = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                        if (cellValue == dni)
+                        if (dataGridView1.Rows[i].Cells[2].Value == null && dataGridView1.Rows.Count > 1)
                         {
-                            dataGridView1.Rows.RemoveAt(dataGridView1.Rows[i].Index);
-                            break;
+                            MessageBox.Show("No se encuentra el empleado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            string cellValue = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                            if (cellValue == dni)
+                            {
+                                dataGridView1.Rows.RemoveAt(dataGridView1.Rows[i].Index);
+                                break;
+                            }
                         }
                     }
                 }
+                catch
+                {
+                    MessageBox.Show("Ingrese una cédula", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch
-            {
-                MessageBox.Show("Ingrese una cédula", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
         }
 
         private void BtnDeleteDni_Click(object sender, EventArgs e)
@@ -61,6 +85,11 @@ namespace WinAppTrabajoGrupal
             {
                 MessageBox.Show("Seleccione un empleado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DeleteForm_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
         }
     }
 }

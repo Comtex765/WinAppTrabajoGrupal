@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WinAppTrabajoGrupal
 {
@@ -16,28 +17,39 @@ namespace WinAppTrabajoGrupal
         {
             InitializeComponent();
         }
-            public Form3VisualizaciónDataGridcs(DataGridView datos)
+
+        private void CargarDatos()
         {
-            InitializeComponent();
+            // Ruta del archivo que se desea leer.
+            string rutaArchivo = Application.StartupPath + "\\datos.txt";
 
-            dataGridView1.Rows.Clear();
-
-            foreach (DataGridViewRow row in datos.Rows)
+            // Crear un objeto StreamReader para leer el archivo.
+            using (StreamReader lector = new StreamReader(rutaArchivo))
             {
-                dataGridView1.Rows.Add();
-                dataGridView1.Rows[row.Index].Cells["Nombre"].Value = row.Cells[0].Value;
-                dataGridView1.Rows[row.Index].Cells["Apellido"].Value = row.Cells[1].Value;
-                dataGridView1.Rows[row.Index].Cells["Cedula"].Value = row.Cells[2].Value;
-                dataGridView1.Rows[row.Index].Cells["Profesion"].Value = row.Cells[3].Value;
-                dataGridView1.Rows[row.Index].Cells["NumHijos"].Value = row.Cells[4].Value;
-                dataGridView1.Rows[row.Index].Cells["Residencia"].Value = row.Cells[5].Value;
-                dataGridView1.Rows[row.Index].Cells["Sueldo"].Value = row.Cells[6].Value;
+                // Leer todas las líneas del archivo.
+                while (!lector.EndOfStream)
+                {
+                    string linea = lector.ReadLine();
+
+                    string[] palabrasLinea = linea.Split('-');
+
+                    int con = dataGridView1.RowCount;
+                    dataGridView1.Rows.Add(palabrasLinea);
+
+                }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void Form3VisualizaciónDataGridcs_Load(object sender, EventArgs e)
         {
-            dataGridView1.Show();
+            CargarDatos();
+            dataGridView1.ClearSelection();
         }
     }
+
 }
