@@ -60,17 +60,20 @@
             // 
             // TxtUser
             // 
+            this.TxtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUser.Location = new System.Drawing.Point(438, 238);
             this.TxtUser.Name = "TxtUser";
-            this.TxtUser.Size = new System.Drawing.Size(210, 20);
+            this.TxtUser.Size = new System.Drawing.Size(210, 22);
             this.TxtUser.TabIndex = 1;
             this.TxtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUser_KeyPress);
             // 
             // TxtPsw
             // 
+            this.TxtPsw.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPsw.Location = new System.Drawing.Point(438, 280);
             this.TxtPsw.Name = "TxtPsw";
-            this.TxtPsw.Size = new System.Drawing.Size(210, 20);
+            this.TxtPsw.PasswordChar = '*';
+            this.TxtPsw.Size = new System.Drawing.Size(210, 22);
             this.TxtPsw.TabIndex = 2;
             this.TxtPsw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPsw_KeyPress);
             // 
