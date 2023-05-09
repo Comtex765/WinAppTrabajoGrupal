@@ -93,5 +93,18 @@ namespace WinAppTrabajoGrupal
         {
 
         }
+
+        private void FormInicio_Load(object sender, EventArgs e)
+        {
+            Form2IngresoDatos formIngreso = new Form2IngresoDatos();
+
+            formIngreso.TopLevel = false;
+            formIngreso.Dock = DockStyle.Fill;
+
+            panel2.Controls.Add(formIngreso);
+            panel2.Tag = formIngreso;
+
+            formIngreso.Show();
+        }
     }
 }

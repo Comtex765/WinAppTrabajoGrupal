@@ -28,16 +28,20 @@ namespace WinAppTrabajoGrupal
                 // Crear un objeto StreamReader para leer el archivo.
                 using (StreamReader lector = new StreamReader(rutaArchivo))
                 {
-                    // Leer todas las líneas del archivo.
+                    int i = 0;
                     while (!lector.EndOfStream)
                     {
-                        string linea = lector.ReadLine();
+                        dataGridView1.Rows.Add();
 
+                        DataGridViewCell headerCell = dataGridView1.Rows[i].HeaderCell;
+                        headerCell.Value = (i + 1).ToString();
+
+                        string linea = lector.ReadLine();
                         string[] palabrasLinea = linea.Split('-');
 
-                        int con = dataGridView1.RowCount;
-                        dataGridView1.Rows.Add(palabrasLinea);
-
+                        for (int j = 0; j < palabrasLinea.Length; j++)
+                            dataGridView1[j, i].Value = palabrasLinea[j];
+                        i++;
                     }
                 }
             }

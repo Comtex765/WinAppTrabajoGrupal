@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Net.WebRequestMethods;
 
 namespace WinAppTrabajoGrupal
 {
@@ -29,30 +31,28 @@ namespace WinAppTrabajoGrupal
                 using (StreamReader lector = new StreamReader(rutaArchivo))
                 {
                     // Leer todas las líneas del archivo.
+                    int i = 0;
                     while (!lector.EndOfStream)
                     {
-                        string linea = lector.ReadLine();
+                        dataGridView1.Rows.Add();
 
+                        DataGridViewCell headerCell = dataGridView1.Rows[i].HeaderCell;
+                        headerCell.Value = (i + 1).ToString();
+
+                        string linea = lector.ReadLine();
                         string[] palabrasLinea = linea.Split('-');
 
-                        int con = dataGridView1.RowCount;
-                        dataGridView1.Rows.Add(palabrasLinea);
-
+                        for (int j = 0; j < palabrasLinea.Length; j++) 
+                            dataGridView1[j, i].Value = palabrasLinea[j];
+                        i++;
                     }
                 }
             }
             catch
             {
 
-            }
-            
+            }   
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Form3VisualizaciónDataGridcs_Load(object sender, EventArgs e)
         {
             CargarDatos();
