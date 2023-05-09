@@ -32,7 +32,7 @@ namespace WinAppTrabajoGrupal
                 {
                     if (dataGridView1.Rows[i].Cells[2].Value == null && dataGridView1.Rows.Count > 1)
                     {
-                        MessageBox.Show("Ingrese un cédula", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se encuentra el empleado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -47,7 +47,7 @@ namespace WinAppTrabajoGrupal
             }
             catch
             {
-                MessageBox.Show("Ingrese un cédula", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese una cédula", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
