@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,19 +36,11 @@
             this.NumHijos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Residencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sueldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.LblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(143, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(727, 70);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Empleados Registrados";
             // 
             // dataGridView1
             // 
@@ -66,11 +57,12 @@
             this.NumHijos,
             this.Residencia,
             this.Sueldo});
-            this.dataGridView1.Location = new System.Drawing.Point(75, 128);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 118);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(900, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(675, 284);
             this.dataGridView1.TabIndex = 2;
             // 
             // Nombre
@@ -115,27 +107,48 @@
             this.Sueldo.MinimumWidth = 6;
             this.Sueldo.Name = "Sueldo";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(67)))));
+            this.panel1.Controls.Add(this.LblTitle);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(788, 100);
+            this.panel1.TabIndex = 3;
+            // 
+            // LblTitle
+            // 
+            this.LblTitle.AutoSize = true;
+            this.LblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitle.ForeColor = System.Drawing.Color.White;
+            this.LblTitle.Location = new System.Drawing.Point(119, 31);
+            this.LblTitle.Name = "LblTitle";
+            this.LblTitle.Size = new System.Drawing.Size(540, 43);
+            this.LblTitle.TabIndex = 0;
+            this.LblTitle.Text = "EMPLEADOS REGISTRADOS";
+            // 
             // Form3VisualizaciónDataGridcs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
-            this.ClientSize = new System.Drawing.Size(1050, 525);
+            this.ClientSize = new System.Drawing.Size(788, 427);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form3VisualizaciónDataGridcs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3VisualizaciónDataGridcs";
             this.Load += new System.EventHandler(this.Form3VisualizaciónDataGridcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
@@ -144,5 +157,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NumHijos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Residencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sueldo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LblTitle;
     }
 }

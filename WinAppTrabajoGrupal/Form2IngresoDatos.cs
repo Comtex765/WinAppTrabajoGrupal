@@ -166,13 +166,13 @@ namespace WinAppTrabajoGrupal
         {
             if(radioAdmiFin.Checked || radioDesWeb.Checked || radioDisGraf.Checked || radioMarket.Checked || radioProgra.Checked)
             {
-                MessageBox.Show("El empleado se ha agregado al DataGrid, verlo en el menú", "INFO");
+                MessageBox.Show("El empleado se ha agregado correctamente, verlo en el menú", "INFO");
                 int fila = dataGridView1.RowCount - 2;
                 CalcularSueldo();
                 dataGridView1[4, fila].Value = numHijos.Value.ToString();
 
                 Form3VisualizaciónDataGridcs a = new Form3VisualizaciónDataGridcs(dataGridView1);
-                a.Show();
+                a.ShowDialog();
             }
             else
             {
