@@ -20,24 +20,32 @@ namespace WinAppTrabajoGrupal
 
         private void CargarDatos()
         {
-            // Ruta del archivo que se desea leer.
-            string rutaArchivo = Application.StartupPath + "\\datos.txt";
-
-            // Crear un objeto StreamReader para leer el archivo.
-            using (StreamReader lector = new StreamReader(rutaArchivo))
+            try
             {
-                // Leer todas las líneas del archivo.
-                while (!lector.EndOfStream)
+                // Ruta del archivo que se desea leer.
+                string rutaArchivo = Application.StartupPath + "\\datos.txt";
+
+                // Crear un objeto StreamReader para leer el archivo.
+                using (StreamReader lector = new StreamReader(rutaArchivo))
                 {
-                    string linea = lector.ReadLine();
+                    // Leer todas las líneas del archivo.
+                    while (!lector.EndOfStream)
+                    {
+                        string linea = lector.ReadLine();
 
-                    string[] palabrasLinea = linea.Split('-');
+                        string[] palabrasLinea = linea.Split('-');
 
-                    int con = dataGridView1.RowCount;
-                    dataGridView1.Rows.Add(palabrasLinea);
+                        int con = dataGridView1.RowCount;
+                        dataGridView1.Rows.Add(palabrasLinea);
 
+                    }
                 }
             }
+            catch
+            {
+
+            }
+            
         }
 
 

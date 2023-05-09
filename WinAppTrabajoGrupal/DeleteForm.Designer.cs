@@ -31,17 +31,18 @@
             this.LblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BtnDeleteDni = new System.Windows.Forms.Button();
+            this.TxtDni = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumHijos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Residencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sueldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnDeleteDni = new System.Windows.Forms.Button();
-            this.TxtDni = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +81,7 @@
             this.Profesion,
             this.NumHijos,
             this.Residencia,
+            this.Area,
             this.Sueldo});
             this.dataGridView1.Location = new System.Drawing.Point(11, 115);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -88,6 +90,51 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(590, 360);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // BtnDeleteDni
+            // 
+            this.BtnDeleteDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(190)))), ((int)(((byte)(154)))));
+            this.BtnDeleteDni.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDeleteDni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeleteDni.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDeleteDni.Location = new System.Drawing.Point(616, 227);
+            this.BtnDeleteDni.Name = "BtnDeleteDni";
+            this.BtnDeleteDni.Size = new System.Drawing.Size(106, 42);
+            this.BtnDeleteDni.TabIndex = 4;
+            this.BtnDeleteDni.Text = "ELIMINAR";
+            this.BtnDeleteDni.UseVisualStyleBackColor = false;
+            this.BtnDeleteDni.Click += new System.EventHandler(this.BtnDeleteDni_Click);
+            // 
+            // TxtDni
+            // 
+            this.TxtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDni.Location = new System.Drawing.Point(616, 146);
+            this.TxtDni.Name = "TxtDni";
+            this.TxtDni.Size = new System.Drawing.Size(158, 22);
+            this.TxtDni.TabIndex = 5;
+            this.TxtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDni_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(613, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "1. Ingrese una cédula para eliminar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(613, 197);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(285, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "2. Seleccione una fila para eliminar";
             // 
             // Nombre
             // 
@@ -125,54 +172,16 @@
             this.Residencia.MinimumWidth = 6;
             this.Residencia.Name = "Residencia";
             // 
+            // Area
+            // 
+            this.Area.HeaderText = "Área de Trabajo";
+            this.Area.Name = "Area";
+            // 
             // Sueldo
             // 
             this.Sueldo.HeaderText = "Sueldo";
             this.Sueldo.MinimumWidth = 6;
             this.Sueldo.Name = "Sueldo";
-            // 
-            // BtnDeleteDni
-            // 
-            this.BtnDeleteDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
-            this.BtnDeleteDni.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteDni.Location = new System.Drawing.Point(616, 228);
-            this.BtnDeleteDni.Name = "BtnDeleteDni";
-            this.BtnDeleteDni.Size = new System.Drawing.Size(106, 42);
-            this.BtnDeleteDni.TabIndex = 4;
-            this.BtnDeleteDni.Text = "Eliminar";
-            this.BtnDeleteDni.UseVisualStyleBackColor = false;
-            this.BtnDeleteDni.Click += new System.EventHandler(this.BtnDeleteDni_Click);
-            // 
-            // TxtDni
-            // 
-            this.TxtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDni.Location = new System.Drawing.Point(616, 146);
-            this.TxtDni.Name = "TxtDni";
-            this.TxtDni.Size = new System.Drawing.Size(158, 22);
-            this.TxtDni.TabIndex = 5;
-            this.TxtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDni_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(613, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "1. Ingrese una cédula para eliminar";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(613, 197);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "2. Seleccione una fila para eliminar";
             // 
             // DeleteForm
             // 
@@ -203,16 +212,17 @@
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button BtnDeleteDni;
+        private System.Windows.Forms.TextBox TxtDni;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumHijos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Residencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sueldo;
-        private System.Windows.Forms.Button BtnDeleteDni;
-        private System.Windows.Forms.TextBox TxtDni;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }

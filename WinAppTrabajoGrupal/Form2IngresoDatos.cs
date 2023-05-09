@@ -13,6 +13,7 @@ namespace WinAppTrabajoGrupal
 {
     public partial class Form2IngresoDatos : Form
     {
+        string areaTrabajo;
         public Form2IngresoDatos()
         {
             InitializeComponent();
@@ -163,18 +164,19 @@ namespace WinAppTrabajoGrupal
             // Crear un objeto StreamWriter para escribir en el archivo.
             using (StreamWriter escritor = new StreamWriter(rutaArchivo, true))
             {
+
                 // Escribir los datos en el archivo.
-                escritor.WriteLine(textNom.Text + 
-                    "-" + textApe.Text + 
-                    "-" + textCed.Text + 
-                    "-" + textProf.Text + 
-                    "-" + textCiudad.Text + 
-                    "-" + numHijos.Text + 
-                    "-" + sueldo
+                escritor.WriteLine(
+                    textNom.Text + "-" + 
+                    textApe.Text +  "-" + 
+                    textCed.Text +  "-" + 
+                    textProf.Text + "-" +
+                    numHijos.Text + "-" +
+                    textCiudad.Text + "-" + 
+                    areaTrabajo + "-" +
+                    sueldo
                 );
             }
-
-
         }
         private void Reiniciar()
         {
@@ -204,20 +206,54 @@ namespace WinAppTrabajoGrupal
             }
         }
 
+        private int CalcularBono()
+        {
+            if (textCiudad.Text != "RIOBAMBA")
+                return 50 * (int)numHijos.Value;
+
+            return 0;
+        }
+
         private string CalcularSueldo()
         {
+            int sueldo = 0;
             if (radioAdmiFin.Checked)
-                return "Administración Financiera: $2000 /mes";
-            else if (radioProgra.Checked)
-                return "Programación: $5000 /mes";
-            else if (radioDesWeb.Checked)
-                return "Desarrollo Web: $1500 /mes";
-            else if (radioMarket.Checked)
-                return "Marketing: $4200 /mes";
-            else if (radioDisGraf.Checked)
-                return "Diseño Gráfico: $1800 /mes";
+            {
+                areaTrabajo = "Administración Financiera";
 
-            return "#####";
+                sueldo = 2000;
+                sueldo += CalcularBono();
+            }
+            else if (radioProgra.Checked)
+            {
+                areaTrabajo = "Programación";
+
+                sueldo = 5000;
+                sueldo += CalcularBono();
+            }
+            else if (radioDesWeb.Checked)
+            {
+                areaTrabajo = "Desarrollo Web";
+
+                sueldo = 1500;
+                sueldo += CalcularBono();
+            }
+            else if (radioMarket.Checked)
+            {
+                areaTrabajo = "Marketing";
+
+                sueldo = 4200;
+                sueldo += CalcularBono();
+            }
+            else if (radioDisGraf.Checked)
+            {
+                areaTrabajo = "Diseño Gráfico";
+
+                sueldo = 1800;
+                sueldo += CalcularBono();
+            }
+
+            return ("$" + sueldo.ToString() + " /mes");
 
         }
     }

@@ -57,6 +57,7 @@ namespace WinAppTrabajoGrupal
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+                e.Handled = true;
                 try
                 {
                     user = TxtUser.Text;
@@ -80,6 +81,7 @@ namespace WinAppTrabajoGrupal
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+                e.Handled = true;
                 try
                 {
                     psw = TxtPsw.Text;
