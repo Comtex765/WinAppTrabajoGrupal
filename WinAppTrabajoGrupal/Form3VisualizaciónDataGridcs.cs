@@ -12,9 +12,15 @@ namespace WinAppTrabajoGrupal
 {
     public partial class Form3VisualizaciónDataGridcs : Form
     {
-        public Form3VisualizaciónDataGridcs()
+        public Form3VisualizaciónDataGridcs(DataGridView datos)
         {
+            
             InitializeComponent();
+        }
+
+        private void Form3VisualizaciónDataGridcs_Load(object sender, EventArgs e)
+        {
+            dataGridView1.Show();
         }
     }
 }

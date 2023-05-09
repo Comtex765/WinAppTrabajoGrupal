@@ -126,6 +126,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3VisualizaciónDataGridcs";
             this.Text = "Form3VisualizaciónDataGridcs";
+            this.Load += new System.EventHandler(this.Form3VisualizaciónDataGridcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

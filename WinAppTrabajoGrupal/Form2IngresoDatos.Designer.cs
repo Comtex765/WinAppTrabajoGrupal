@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,19 +50,19 @@
             this.numHijos = new System.Windows.Forms.NumericUpDown();
             this.textCiudad = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.picCiudad = new System.Windows.Forms.PictureBox();
-            this.picProf = new System.Windows.Forms.PictureBox();
-            this.picCed = new System.Windows.Forms.PictureBox();
-            this.picApe = new System.Windows.Forms.PictureBox();
-            this.picNom = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Residencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sueldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numHijos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCiudad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picApe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picNom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -220,20 +221,15 @@
             this.groupBox1.Controls.Add(this.radioProgra);
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(244)))), ((int)(((byte)(211)))));
-            this.groupBox1.Location = new System.Drawing.Point(634, 116);
+            this.groupBox1.Location = new System.Drawing.Point(606, 116);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 252);
+            this.groupBox1.Size = new System.Drawing.Size(406, 252);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Área de Trabajo";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.picCiudad);
-            this.groupBox2.Controls.Add(this.picProf);
-            this.groupBox2.Controls.Add(this.picCed);
-            this.groupBox2.Controls.Add(this.picApe);
-            this.groupBox2.Controls.Add(this.picNom);
             this.groupBox2.Controls.Add(this.textCiudad);
             this.groupBox2.Controls.Add(this.numHijos);
             this.groupBox2.Controls.Add(this.textProf);
@@ -262,6 +258,7 @@
             this.textNom.Name = "textNom";
             this.textNom.Size = new System.Drawing.Size(183, 34);
             this.textNom.TabIndex = 7;
+            this.textNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNom_KeyPress);
             // 
             // textApe
             // 
@@ -269,6 +266,7 @@
             this.textApe.Name = "textApe";
             this.textApe.Size = new System.Drawing.Size(183, 34);
             this.textApe.TabIndex = 8;
+            this.textApe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApe_KeyPress);
             // 
             // textCed
             // 
@@ -276,6 +274,7 @@
             this.textCed.Name = "textCed";
             this.textCed.Size = new System.Drawing.Size(183, 34);
             this.textCed.TabIndex = 9;
+            this.textCed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCed_KeyPress);
             // 
             // textProf
             // 
@@ -283,6 +282,7 @@
             this.textProf.Name = "textProf";
             this.textProf.Size = new System.Drawing.Size(183, 34);
             this.textProf.TabIndex = 10;
+            this.textProf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textProf_KeyPress);
             // 
             // numHijos
             // 
@@ -298,6 +298,7 @@
             this.textCiudad.Name = "textCiudad";
             this.textCiudad.Size = new System.Drawing.Size(183, 34);
             this.textCiudad.TabIndex = 16;
+            this.textCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCiudad_KeyPress);
             // 
             // button1
             // 
@@ -311,56 +312,71 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "ACEPTAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // picCiudad
+            // dataGridView1
             // 
-            this.picCiudad.Image = global::WinAppTrabajoGrupal.Properties.Resources.advertencia;
-            this.picCiudad.Location = new System.Drawing.Point(403, 245);
-            this.picCiudad.Name = "picCiudad";
-            this.picCiudad.Size = new System.Drawing.Size(34, 34);
-            this.picCiudad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCiudad.TabIndex = 21;
-            this.picCiudad.TabStop = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellido,
+            this.Cedula,
+            this.Profesion,
+            this.dataGridViewTextBoxColumn1,
+            this.Residencia,
+            this.Sueldo});
+            this.dataGridView1.Location = new System.Drawing.Point(76, 5);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(924, 105);
+            this.dataGridView1.TabIndex = 15;
             // 
-            // picProf
+            // Nombre
             // 
-            this.picProf.Image = global::WinAppTrabajoGrupal.Properties.Resources.advertencia;
-            this.picProf.Location = new System.Drawing.Point(403, 195);
-            this.picProf.Name = "picProf";
-            this.picProf.Size = new System.Drawing.Size(34, 34);
-            this.picProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picProf.TabIndex = 20;
-            this.picProf.TabStop = false;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
             // 
-            // picCed
+            // Apellido
             // 
-            this.picCed.Image = global::WinAppTrabajoGrupal.Properties.Resources.advertencia;
-            this.picCed.Location = new System.Drawing.Point(403, 145);
-            this.picCed.Name = "picCed";
-            this.picCed.Size = new System.Drawing.Size(34, 34);
-            this.picCed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCed.TabIndex = 19;
-            this.picCed.TabStop = false;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
+            this.Apellido.Name = "Apellido";
             // 
-            // picApe
+            // Cedula
             // 
-            this.picApe.Image = global::WinAppTrabajoGrupal.Properties.Resources.advertencia;
-            this.picApe.Location = new System.Drawing.Point(403, 95);
-            this.picApe.Name = "picApe";
-            this.picApe.Size = new System.Drawing.Size(34, 34);
-            this.picApe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picApe.TabIndex = 18;
-            this.picApe.TabStop = false;
+            this.Cedula.HeaderText = "Cédula";
+            this.Cedula.MinimumWidth = 6;
+            this.Cedula.Name = "Cedula";
             // 
-            // picNom
+            // Profesion
             // 
-            this.picNom.Image = global::WinAppTrabajoGrupal.Properties.Resources.advertencia;
-            this.picNom.Location = new System.Drawing.Point(403, 45);
-            this.picNom.Name = "picNom";
-            this.picNom.Size = new System.Drawing.Size(34, 34);
-            this.picNom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picNom.TabIndex = 17;
-            this.picNom.TabStop = false;
+            this.Profesion.HeaderText = "Profesión";
+            this.Profesion.MinimumWidth = 6;
+            this.Profesion.Name = "Profesion";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "# hijos";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // Residencia
+            // 
+            this.Residencia.HeaderText = "Residencia";
+            this.Residencia.MinimumWidth = 6;
+            this.Residencia.Name = "Residencia";
+            // 
+            // Sueldo
+            // 
+            this.Sueldo.HeaderText = "Sueldo";
+            this.Sueldo.MinimumWidth = 6;
+            this.Sueldo.Name = "Sueldo";
             // 
             // Form2IngresoDatos
             // 
@@ -368,6 +384,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(1050, 525);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -381,11 +398,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numHijos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCiudad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picApe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picNom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,11 +426,15 @@
         private System.Windows.Forms.TextBox textApe;
         private System.Windows.Forms.TextBox textNom;
         private System.Windows.Forms.TextBox textCiudad;
-        private System.Windows.Forms.PictureBox picNom;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox picCiudad;
-        private System.Windows.Forms.PictureBox picProf;
-        private System.Windows.Forms.PictureBox picCed;
-        private System.Windows.Forms.PictureBox picApe;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Profesion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Residencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sueldo;
     }
 }
