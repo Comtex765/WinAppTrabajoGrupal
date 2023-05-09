@@ -51,7 +51,18 @@ namespace WinAppTrabajoGrupal
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (panel2.Controls.Count > 0)
+                panel2.Controls.RemoveAt(0);
 
+            //DeleteForm formVer = new DeleteForm();
+
+            //formVer.TopLevel = false;
+            //formVer.Dock = DockStyle.Fill;
+
+            //panel2.Controls.Add(formVer);
+            //panel2.Tag = formVer;
+
+            //formVer.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
