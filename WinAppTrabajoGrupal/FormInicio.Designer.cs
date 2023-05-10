@@ -153,7 +153,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Aplicación de empresa";
+            this.Text = "Aplicación de Empresa";
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 

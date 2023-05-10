@@ -33,9 +33,13 @@ namespace WinAppTrabajoGrupal
                 {
                     if (psw == usCredentials[1])
                     {
+                        Form1 principal = new Form1();
                         MessageBox.Show("Inicio de sesión exitoso", "Iniciar Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
                         FormInicio obj = new FormInicio();
                         obj.ShowDialog();
+                        principal.Show();
+                        
                     }
                     else
                     {
@@ -99,8 +103,12 @@ namespace WinAppTrabajoGrupal
 
         private void BtnGuest_Click(object sender, EventArgs e)
         {
+            Form1 principal = new Form1();
+            this.Hide();
             FormInicioGuest obj = new FormInicioGuest();
             obj.ShowDialog();
+
+            principal.Show();
         }
     }
 }

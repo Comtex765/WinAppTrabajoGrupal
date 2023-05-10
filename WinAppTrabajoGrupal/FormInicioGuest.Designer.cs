@@ -44,7 +44,7 @@
             this.panelMenu.Controls.Add(this.buttonListar);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(127, 486);
             this.panelMenu.TabIndex = 0;
@@ -56,10 +56,10 @@
             this.buttonVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVer.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVer.ForeColor = System.Drawing.Color.White;
-            this.buttonVer.Location = new System.Drawing.Point(0, 97);
-            this.buttonVer.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonVer.Location = new System.Drawing.Point(0, 0);
+            this.buttonVer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonVer.Name = "buttonVer";
-            this.buttonVer.Size = new System.Drawing.Size(127, 97);
+            this.buttonVer.Size = new System.Drawing.Size(127, 162);
             this.buttonVer.TabIndex = 1;
             this.buttonVer.Text = "Visualizar Empleados";
             this.buttonVer.UseVisualStyleBackColor = false;
@@ -72,10 +72,10 @@
             this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalir.ForeColor = System.Drawing.Color.White;
-            this.buttonSalir.Location = new System.Drawing.Point(0, 388);
-            this.buttonSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSalir.Location = new System.Drawing.Point(0, 324);
+            this.buttonSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(127, 98);
+            this.buttonSalir.Size = new System.Drawing.Size(127, 162);
             this.buttonSalir.TabIndex = 4;
             this.buttonSalir.Text = "SALIR";
             this.buttonSalir.UseVisualStyleBackColor = false;
@@ -88,10 +88,10 @@
             this.buttonListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonListar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonListar.ForeColor = System.Drawing.Color.White;
-            this.buttonListar.Location = new System.Drawing.Point(0, 194);
-            this.buttonListar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonListar.Location = new System.Drawing.Point(0, 162);
+            this.buttonListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonListar.Name = "buttonListar";
-            this.buttonListar.Size = new System.Drawing.Size(127, 97);
+            this.buttonListar.Size = new System.Drawing.Size(127, 162);
             this.buttonListar.TabIndex = 3;
             this.buttonListar.Text = "Listar Empleados";
             this.buttonListar.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@
             this.panelCargarForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCargarForm.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.panelCargarForm.Location = new System.Drawing.Point(127, 0);
-            this.panelCargarForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panelCargarForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCargarForm.Name = "panelCargarForm";
             this.panelCargarForm.Size = new System.Drawing.Size(907, 486);
             this.panelCargarForm.TabIndex = 1;
@@ -115,10 +115,10 @@
             this.ClientSize = new System.Drawing.Size(1034, 486);
             this.Controls.Add(this.panelCargarForm);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormInicioGuest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Aplicación de empresa";
+            this.Text = "Aplicación de Empresa";
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
