@@ -100,5 +100,11 @@ namespace WinAppTrabajoGrupal
         private void Form1_Load(object sender, EventArgs e)
         {
         }
+
+        private void BtnGuest_Click(object sender, EventArgs e)
+        {
+            FormInicioGuest obj = new FormInicioGuest();
+            obj.ShowDialog();
+        }
     }
 }

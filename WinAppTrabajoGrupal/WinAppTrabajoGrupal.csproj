@@ -70,6 +70,12 @@
     <Compile Include="Form3VisualizaciónDataGridcs.Designer.cs">
       <DependentUpon>Form3VisualizaciónDataGridcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInicioGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInicioGuest.Designer.cs">
+      <DependentUpon>FormInicioGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3VisualizaciónDataGridcs.resx">
       <DependentUpon>Form3VisualizaciónDataGridcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInicioGuest.resx">
+      <DependentUpon>FormInicioGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
