@@ -73,9 +73,15 @@ namespace WinAppTrabajoGrupal
                             string cellValue = dataGridView1.Rows[i].Cells[2].Value.ToString();
                             if (cellValue == dni)
                             {
-                                dataGridView1.Rows.RemoveAt(dataGridView1.Rows[i].Index);
-                                EliminarDeData(i);
-                                break;
+                                string texto = "¿Está seguro de eliminar al empleado de la base de datos?";
+
+                                bool opcion = MessageBox.Show(texto, "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes;
+
+                                if (opcion)
+                                {
+                                    dataGridView1.Rows.RemoveAt(dataGridView1.Rows[i].Index);
+                                    EliminarDeData(i);
+                                }
                             }
                         }
                     }
@@ -120,10 +126,18 @@ namespace WinAppTrabajoGrupal
         {
             try
             {
-                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
-                EliminarDeData(dataGridView1.CurrentRow.Index);
+                string texto = "¿Está seguro de eliminar al empleado de la base de datos?";
+
+                bool opcion = MessageBox.Show(texto, "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes;
+
+                if (opcion)
+                {
+                    dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                    EliminarDeData(dataGridView1.CurrentRow.Index);
+                }
+                
             }
-            catch (Exception ex)
+            catch 
             {
                 MessageBox.Show("Seleccione un empleado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
