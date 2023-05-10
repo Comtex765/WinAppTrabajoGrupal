@@ -51,6 +51,7 @@ namespace WinAppTrabajoGrupal
         private void FormListar_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            labelNoExisten.Visible = false;
             textFiltro.Enabled = false;
         }
 
@@ -64,12 +65,26 @@ namespace WinAppTrabajoGrupal
 
         private void Filtro(int col, string valor)
         {
+            bool hay = false;
+
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
-                if (dataGridView1[col,i].Value.ToString() == valor)
+                if (dataGridView1[col, i].Value.ToString() == valor)
+                {
                     dataGridView1.Rows[i].Visible = true;
+                    hay = true;
+                }
                 else
+                {
                     dataGridView1.Rows[i].Visible = false;
+                    if (hay)
+                        continue;
+                }
+
+                if (hay == false)
+                    labelNoExisten.Visible = true;
+                else
+                    labelNoExisten.Visible = false;
             }
         }
 
