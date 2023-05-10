@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WinAppTrabajoGrupal
@@ -52,6 +45,7 @@ namespace WinAppTrabajoGrupal
         {
             CargarDatos();
             labelNoExisten.Visible = false;
+            comboBoxFiltro.SelectedItem = "TODOS";
             textFiltro.Enabled = false;
         }
 
@@ -94,6 +88,7 @@ namespace WinAppTrabajoGrupal
         {
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 dataGridView1.Rows[i].Visible = true;
+            labelNoExisten.Visible = false;
         }
 
 
@@ -134,6 +129,11 @@ namespace WinAppTrabajoGrupal
                     MessageBox.Show("Debes ingresar el valor con el que se comparará", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void comboBoxFiltro_MouseClick(object sender, MouseEventArgs e)
+        {
+            comboBoxFiltro.DroppedDown = true;
         }
     }
 }

@@ -39,10 +39,6 @@
             this.LblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnDeleteDni = new System.Windows.Forms.Button();
-            this.TxtDni = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +47,10 @@
             this.Residencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sueldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnDeleteDni = new System.Windows.Forms.Button();
+            this.TxtDni = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -60,10 +60,9 @@
             this.LblTitle.AutoSize = true;
             this.LblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitle.ForeColor = System.Drawing.Color.White;
-            this.LblTitle.Location = new System.Drawing.Point(305, 32);
-            this.LblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTitle.Location = new System.Drawing.Point(229, 26);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(564, 54);
+            this.LblTitle.Size = new System.Drawing.Size(448, 43);
             this.LblTitle.TabIndex = 0;
             this.LblTitle.Text = "ELIMINAR EMPLEADOS";
             // 
@@ -72,9 +71,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(67)))));
             this.panel1.Controls.Add(this.LblTitle);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1209, 123);
+            this.panel1.Size = new System.Drawing.Size(907, 100);
             this.panel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -93,13 +91,94 @@
             this.Residencia,
             this.Area,
             this.Sueldo});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 142);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 115);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(787, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(590, 346);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // Nombre
+            // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
+            // 
+            // Apellido
+            // 
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.Apellido.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 69;
+            // 
+            // Cedula
+            // 
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Cedula.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Cedula.HeaderText = "Cédula";
+            this.Cedula.MinimumWidth = 6;
+            this.Cedula.Name = "Cedula";
+            this.Cedula.ReadOnly = true;
+            this.Cedula.Width = 65;
+            // 
+            // Profesion
+            // 
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Profesion.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Profesion.HeaderText = "Profesión";
+            this.Profesion.MinimumWidth = 6;
+            this.Profesion.Name = "Profesion";
+            this.Profesion.ReadOnly = true;
+            this.Profesion.Width = 76;
+            // 
+            // NumHijos
+            // 
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.NumHijos.DefaultCellStyle = dataGridViewCellStyle5;
+            this.NumHijos.HeaderText = "#hijos";
+            this.NumHijos.MinimumWidth = 6;
+            this.NumHijos.Name = "NumHijos";
+            this.NumHijos.ReadOnly = true;
+            this.NumHijos.Width = 60;
+            // 
+            // Residencia
+            // 
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.Residencia.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Residencia.HeaderText = "Residencia";
+            this.Residencia.MinimumWidth = 6;
+            this.Residencia.Name = "Residencia";
+            this.Residencia.ReadOnly = true;
+            this.Residencia.Width = 85;
+            // 
+            // Area
+            // 
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.Area.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Area.HeaderText = "Área de Trabajo";
+            this.Area.MinimumWidth = 6;
+            this.Area.Name = "Area";
+            this.Area.ReadOnly = true;
+            this.Area.Width = 99;
+            // 
+            // Sueldo
+            // 
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.Sueldo.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Sueldo.HeaderText = "Sueldo";
+            this.Sueldo.MinimumWidth = 6;
+            this.Sueldo.Name = "Sueldo";
+            this.Sueldo.ReadOnly = true;
+            this.Sueldo.Width = 65;
             // 
             // BtnDeleteDni
             // 
@@ -109,10 +188,9 @@
             this.BtnDeleteDni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDeleteDni.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDeleteDni.ForeColor = System.Drawing.Color.Black;
-            this.BtnDeleteDni.Location = new System.Drawing.Point(821, 294);
-            this.BtnDeleteDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnDeleteDni.Location = new System.Drawing.Point(616, 239);
             this.BtnDeleteDni.Name = "BtnDeleteDni";
-            this.BtnDeleteDni.Size = new System.Drawing.Size(155, 52);
+            this.BtnDeleteDni.Size = new System.Drawing.Size(116, 42);
             this.BtnDeleteDni.TabIndex = 4;
             this.BtnDeleteDni.Text = "ELIMINAR";
             this.BtnDeleteDni.UseVisualStyleBackColor = false;
@@ -121,10 +199,9 @@
             // TxtDni
             // 
             this.TxtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDni.Location = new System.Drawing.Point(821, 180);
-            this.TxtDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtDni.Location = new System.Drawing.Point(616, 146);
             this.TxtDni.Name = "TxtDni";
-            this.TxtDni.Size = new System.Drawing.Size(209, 26);
+            this.TxtDni.Size = new System.Drawing.Size(158, 22);
             this.TxtDni.TabIndex = 5;
             this.TxtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDni_KeyPress);
             // 
@@ -133,10 +210,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(817, 142);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(613, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 23);
+            this.label1.Size = new System.Drawing.Size(288, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "1. Ingrese una cédula para eliminar";
             // 
@@ -145,91 +221,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(817, 242);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(613, 197);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(349, 23);
+            this.label2.Size = new System.Drawing.Size(285, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "2. Seleccione una fila para eliminar";
             // 
-            // Nombre
-            // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 85;
-            // 
-            // Apellido
-            // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Apellido.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.MinimumWidth = 6;
-            this.Apellido.Name = "Apellido";
-            this.Apellido.Width = 86;
-            // 
-            // Cedula
-            // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Cedula.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Cedula.HeaderText = "Cédula";
-            this.Cedula.MinimumWidth = 6;
-            this.Cedula.Name = "Cedula";
-            this.Cedula.Width = 79;
-            // 
-            // Profesion
-            // 
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.Profesion.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Profesion.HeaderText = "Profesión";
-            this.Profesion.MinimumWidth = 6;
-            this.Profesion.Name = "Profesion";
-            this.Profesion.Width = 93;
-            // 
-            // NumHijos
-            // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.NumHijos.DefaultCellStyle = dataGridViewCellStyle5;
-            this.NumHijos.HeaderText = "#hijos";
-            this.NumHijos.MinimumWidth = 6;
-            this.NumHijos.Name = "NumHijos";
-            this.NumHijos.Width = 71;
-            // 
-            // Residencia
-            // 
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.Residencia.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Residencia.HeaderText = "Residencia";
-            this.Residencia.MinimumWidth = 6;
-            this.Residencia.Name = "Residencia";
-            this.Residencia.Width = 105;
-            // 
-            // Area
-            // 
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.Area.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Area.HeaderText = "Área de Trabajo";
-            this.Area.MinimumWidth = 6;
-            this.Area.Name = "Area";
-            this.Area.Width = 124;
-            // 
-            // Sueldo
-            // 
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.Sueldo.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Sueldo.HeaderText = "Sueldo";
-            this.Sueldo.MinimumWidth = 6;
-            this.Sueldo.Name = "Sueldo";
-            this.Sueldo.Width = 79;
-            // 
             // DeleteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
-            this.ClientSize = new System.Drawing.Size(1209, 598);
+            this.ClientSize = new System.Drawing.Size(907, 486);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtDni);
@@ -237,7 +240,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteForm";

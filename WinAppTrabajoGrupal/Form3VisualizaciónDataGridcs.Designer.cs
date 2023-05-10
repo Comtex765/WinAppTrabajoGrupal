@@ -56,9 +56,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(67)))));
             this.panel1.Controls.Add(this.LblTitle);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1209, 123);
+            this.panel1.Size = new System.Drawing.Size(907, 100);
             this.panel1.TabIndex = 3;
             // 
             // LblTitle
@@ -66,10 +65,9 @@
             this.LblTitle.AutoSize = true;
             this.LblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitle.ForeColor = System.Drawing.Color.White;
-            this.LblTitle.Location = new System.Drawing.Point(244, 31);
-            this.LblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTitle.Location = new System.Drawing.Point(183, 25);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(680, 54);
+            this.LblTitle.Size = new System.Drawing.Size(540, 43);
             this.LblTitle.TabIndex = 0;
             this.LblTitle.Text = "EMPLEADOS REGISTRADOS";
             // 
@@ -89,12 +87,13 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.dataGridView1.Location = new System.Drawing.Point(71, 146);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 119);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1067, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 325);
             this.dataGridView1.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -104,6 +103,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -112,6 +112,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -120,6 +121,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Cédula";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -128,6 +130,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Profesión";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -136,6 +139,7 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "#hijos";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -144,6 +148,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Residencia";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -152,6 +157,7 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Área de Trabajo";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -160,17 +166,18 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Sueldo";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // Form3VisualizaciónDataGridcs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
-            this.ClientSize = new System.Drawing.Size(1209, 598);
+            this.ClientSize = new System.Drawing.Size(907, 486);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form3VisualizaciónDataGridcs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3VisualizaciónDataGridcs";
