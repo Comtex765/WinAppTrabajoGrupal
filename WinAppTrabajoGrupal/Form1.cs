@@ -12,7 +12,7 @@ namespace WinAppTrabajoGrupal
 {
     public partial class Form1 : Form
     {
-        string[] usCredentials = { "administrador", "12345" };
+        string[] usCredentials = { "admin", "nachel" };
         string user = "";
         string psw = "";
         public Form1()
@@ -95,10 +95,6 @@ namespace WinAppTrabajoGrupal
                     MessageBox.Show("Ingrese la contraseña", "Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
         }
 
         private void BtnGuest_Click(object sender, EventArgs e)
